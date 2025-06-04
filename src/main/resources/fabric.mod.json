@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "nimbusz",
+	"version": "${version}",
+	"name": "NimbusZ",
+	"description": "Enter The Dragon",
+	"authors": [
+		"zz88k"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU-3.0",
+	"icon": "assets/nimbusz/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.zz88k.nimbusz.NimbusZ"
+		],
+		"fabric-datagen": [
+			"com.github.zz88k.nimbusz.NimbusZDataGenerator"
+		],
+		"client": [
+			"com.github.zz88k.nimbusz.client.NimbusZClient"
+		]
+	},
+	"mixins": [
+		"nimbusz.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
