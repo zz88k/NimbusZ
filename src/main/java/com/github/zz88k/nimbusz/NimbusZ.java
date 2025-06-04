@@ -1,5 +1,8 @@
 package com.github.zz88k.nimbusz;
 
+import com.github.zz88k.nimbusz.block.NimbusZBlockRegistry;
+import com.github.zz88k.nimbusz.item.NimbusZItemGroupRegistry;
+import com.github.zz88k.nimbusz.item.NimbusZItemRegistry;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -13,6 +16,8 @@ public class NimbusZ implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-
+		NimbusZItemRegistry.registerNimbusZItems();
+		NimbusZBlockRegistry.registerNimbusZBlocks();
+		NimbusZItemGroupRegistry.registerNimbusZItemGroups();
 	}
 }

@@ -19,7 +19,7 @@
 			"com.github.zz88k.nimbusz.NimbusZ"
 		],
 		"fabric-datagen": [
-			"com.github.zz88k.nimbusz.NimbusZDataGenerator"
+			"com.github.zz88k.nimbusz.datagen.NimbusZDataGenerator"
 		],
 		"client": [
 			"com.github.zz88k.nimbusz.client.NimbusZClient"
