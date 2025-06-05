@@ -17,6 +17,16 @@ public class NimbusZLootTableRegistry extends FabricBlockLootTableProvider
     @Override
     public void generate()
     {
+        addDrop(NimbusZBlockRegistry.FIR_LOG);
+        addDrop(NimbusZBlockRegistry.FIR_WOOD);
+        addDrop(NimbusZBlockRegistry.STRIPPED_FIR_LOG);
+        addDrop(NimbusZBlockRegistry.STRIPPED_FIR_WOOD);
+        addDrop(NimbusZBlockRegistry.FIR_PLANKS);
+        addDrop(NimbusZBlockRegistry.FIR_STAIRS);
+        addDrop(NimbusZBlockRegistry.FIR_SLAB);
+        addDrop(NimbusZBlockRegistry.FIR_LEAVES, leavesDrops(NimbusZBlockRegistry.FIR_LEAVES, NimbusZBlockRegistry.FIR_SAPLING, 0.0625f));
+        addDrop(NimbusZBlockRegistry.FIR_SAPLING);
+
         addDrop(NimbusZBlockRegistry.LIMESTONE);
     }
 }

@@ -1,4 +1,14 @@
 {
+  "block.nimbusz.fir_leaves": "Fir Leaves",
+  "block.nimbusz.fir_log": "Fir Log",
+  "block.nimbusz.fir_wood": "Fir Wood",
+  "block.nimbusz.stripped_fir_log": "Stripped Fir Log",
+  "block.nimbusz.stripped_fir_wood": "Stripped Fir Wood",
+  "block.nimbusz.fir_planks": "Fir Planks",
+  "block.nimbusz.fir_stairs": "Fir Stairs",
+  "block.nimbusz.fir_slab": "Fir Slab",
+  "block.nimbusz.fir_sapling": "Fir Sapling",
+
   "block.nimbusz.limestone": "Limestone",
 
   "itemgroup.nimbusz.nimbusz_item_group": "NimbusZ"

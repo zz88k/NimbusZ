@@ -17,6 +17,16 @@ public class NimbusZItemGroupRegistry
             FabricItemGroup.builder().icon(() -> new ItemStack(NimbusZBlockRegistry.LIMESTONE))
                     .displayName(Text.translatable("itemgroup.nimbusz.nimbusz_item_group"))
                     .entries((displayContext, entries) -> {
+                        entries.add(NimbusZBlockRegistry.FIR_LOG);
+                        entries.add(NimbusZBlockRegistry.FIR_WOOD);
+                        entries.add(NimbusZBlockRegistry.STRIPPED_FIR_LOG);
+                        entries.add(NimbusZBlockRegistry.STRIPPED_FIR_WOOD);
+                        entries.add(NimbusZBlockRegistry.FIR_PLANKS);
+                        entries.add(NimbusZBlockRegistry.FIR_STAIRS);
+                        entries.add(NimbusZBlockRegistry.FIR_SLAB);
+                        entries.add(NimbusZBlockRegistry.FIR_LEAVES);
+                        entries.add(NimbusZBlockRegistry.FIR_SAPLING);
+
                         entries.add(NimbusZBlockRegistry.LIMESTONE);
                     }).build());
 

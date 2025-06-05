@@ -1,10 +1,10 @@
 package com.github.zz88k.nimbusz.block;
 
 import com.github.zz88k.nimbusz.NimbusZ;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
+import com.github.zz88k.nimbusz.world.tree.NimbusZSaplingGenerator;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -14,6 +14,96 @@ import net.minecraft.util.Identifier;
 
 public class NimbusZBlockRegistry
 {
+    public static final Block FIR_LOG = registerBlock("fir_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)
+                .burnable()
+                .instrument(NoteBlockInstrument.BASS)
+                .mapColor(MapColor.BROWN)
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(2.0F, 2.0F)
+            )
+    );
+
+    public static final Block FIR_WOOD = registerBlock("fir_wood",
+            new PillarBlock(AbstractBlock.Settings.create()
+                .burnable()
+                .instrument(NoteBlockInstrument.BASS)
+                .mapColor(MapColor.BROWN)
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(2.0F, 2.0F)
+            )
+    );
+
+    public static final Block STRIPPED_FIR_LOG = registerBlock("stripped_fir_log",
+            new PillarBlock(AbstractBlock.Settings.create()
+                .burnable()
+                .instrument(NoteBlockInstrument.BASS)
+                .mapColor(MapColor.BROWN)
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(2.0F, 2.0F)
+            )
+    );
+
+    public static final Block STRIPPED_FIR_WOOD = registerBlock("stripped_fir_wood",
+            new PillarBlock(AbstractBlock.Settings.create()
+                .burnable()
+                .instrument(NoteBlockInstrument.BASS)
+                .mapColor(MapColor.BROWN)
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(2.0F, 2.0F)
+            )
+    );
+
+    public static final Block FIR_PLANKS = registerBlock("fir_planks",
+            new Block(AbstractBlock.Settings.create()
+                .burnable()
+                .instrument(NoteBlockInstrument.BASS)
+                .mapColor(MapColor.BROWN)
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(2.0F, 3.0F)
+            )
+    );
+
+    public static final Block FIR_STAIRS = registerBlock("fir_stairs",
+            new StairsBlock(FIR_PLANKS.getDefaultState(),
+                AbstractBlock.Settings.copy(FIR_PLANKS)
+            )
+    );
+
+    public static final Block FIR_SLAB = registerBlock("fir_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(FIR_PLANKS)
+            )
+    );
+
+    public static final Block FIR_LEAVES = registerBlock("fir_leaves",
+            new LeavesBlock(AbstractBlock.Settings.create()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .nonOpaque()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .strength(0.2F)
+                    .suffocates(Blocks::never)
+                    .ticksRandomly()
+            )
+    );
+
+    public static final Block FIR_SAPLING = registerBlock("fir_sapling",
+           new NimbusZSaplingBlock(NimbusZSaplingGenerator.FIR, AbstractBlock.Settings.create()
+                   .breakInstantly()
+                   .mapColor(MapColor.DARK_GREEN)
+                   .noCollision()
+                   .pistonBehavior(PistonBehavior.DESTROY)
+                   .sounds(BlockSoundGroup.GRASS)
+                   .ticksRandomly(),
+                   Blocks.DIRT
+           )
+    );
+
+
     public static final Block LIMESTONE = registerBlock("limestone",
             new Block(AbstractBlock.Settings.create()
                     .instrument(NoteBlockInstrument.BASEDRUM)

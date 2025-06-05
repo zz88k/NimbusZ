@@ -8,8 +8,6 @@ import net.minecraft.util.Identifier;
 
 public class NimbusZItemRegistry
 {
-    //public static final Item ITEM0 = registerItem("item0", new Item(new Item.Settings()));
-
     private static Item registerItem(String name, Item item)
     {
         return Registry.register(Registries.ITEM, Identifier.of(NimbusZ.MOD_ID, name), item);

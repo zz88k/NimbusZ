@@ -1,2 +1,11 @@
-// 1.21.1	2025-06-04T05:47:15.8527242	NimbusZ/Block Loot Tables
+// 1.21.1	2025-06-05T04:04:23.5714741	NimbusZ/Block Loot Tables
+b4d4a13bd0513b51d512e36b2af9e80c4dd2ebb8 data\nimbusz\loot_table\blocks\fir_stairs.json
+dffdce807bc08aaa1ad363b9dbc8aeb0dcf31a59 data\nimbusz\loot_table\blocks\fir_leaves.json
+754e4a6f6d434b3169bc5b16b683c300a35fd309 data\nimbusz\loot_table\blocks\stripped_fir_wood.json
+3d518e3a93aaa3e386fc656f23a54ca2501947dc data\nimbusz\loot_table\blocks\fir_wood.json
 0cd99cca42ebfb59cd73a3de3a52a94a51739b7c data\nimbusz\loot_table\blocks\limestone.json
+0d18a90e9d31ce036a0ebe32c7d178fa632131f3 data\nimbusz\loot_table\blocks\fir_planks.json
+ce136e09b8fe626f8ecaa0e1cbb1619d20fec4c2 data\nimbusz\loot_table\blocks\fir_log.json
+3235f675cd02f641305717be1e8a8743658e27e9 data\nimbusz\loot_table\blocks\fir_sapling.json
+d691054a9f6ff45a20ec346d1b000dfd216539bf data\nimbusz\loot_table\blocks\fir_slab.json
+2a13cbc6146903fda34d180d4f5a8a20fe726adc data\nimbusz\loot_table\blocks\stripped_fir_log.json
