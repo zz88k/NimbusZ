@@ -1,9 +1,7 @@
 package com.github.zz88k.nimbusz.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SaplingGenerator;
+import net.minecraft.block.*;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
@@ -20,6 +18,17 @@ public class NimbusZSaplingBlock extends SaplingBlock
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos)
     {
-        return floor.isOf(this.blockToPlaceOn);
+        return floor.isOf(Blocks.DIRT)
+                || floor.isOf(Blocks.GRASS_BLOCK)
+                || floor.isOf(Blocks.COARSE_DIRT)
+                || floor.isOf(Blocks.PODZOL)
+                || floor.isOf(Blocks.FARMLAND);
     }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext context) {
+        System.out.println("Trying to place FIR_SAPLING at " + context.getBlockPos());
+        return super.getPlacementState(context);
+    }
+
 }
