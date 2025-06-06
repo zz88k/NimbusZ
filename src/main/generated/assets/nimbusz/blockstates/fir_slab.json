@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nimbusz:block/fir_slab"
+    },
+    "type=double": {
+      "model": "nimbusz:block/fir_planks"
+    },
+    "type=top": {
+      "model": "nimbusz:block/fir_slab_top"
+    }
+  }
+}

@@ -24,13 +24,19 @@ public class NimbusZConfiguredFeatureRegistry
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context)
     {
         register(context, FIR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(NimbusZBlockRegistry.FIR_LOG),
-                new StraightTrunkPlacer(5, 6, 3),
+                        BlockStateProvider.of(NimbusZBlockRegistry.FIR_LOG),
+                        new StraightTrunkPlacer(5, 6, 3),
 
-                BlockStateProvider.of(NimbusZBlockRegistry.FIR_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
+                        BlockStateProvider.of(NimbusZBlockRegistry.FIR_LEAVES),
+                        new BlobFoliagePlacer(
+                                ConstantIntProvider.create(4), // radius
+                                ConstantIntProvider.create(1), // offset
+                                8 // trunkHeight
+                        ),
 
-                new TwoLayersFeatureSize(1, 0, 2)).dirtProvider(BlockStateProvider.of(Blocks.DIRT)).build());
+                        new TwoLayersFeatureSize(1, 0, 2)
+                ).dirtProvider(BlockStateProvider.of(Blocks.DIRT)).build()
+        );
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name)
