@@ -14,7 +14,9 @@ base
 
 repositories
 {
+	mavenCentral()
 	maven { url = 'https://maven.minecraftforge.net/' }
+	maven { url = "https://maven.glitchfiend.com" }
 }
 
 fabricApi
@@ -34,6 +36,8 @@ dependencies
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	"org.parchmentmc.data:parchment-1.21.1:2024.11.17@zip"
 	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.1-4.1.0.8'
+	modImplementation 'com.electronwill.night-config:toml:3.6.0'
+	modImplementation 'com.electronwill.night-config:core:3.6.0'
 }
 
 processResources

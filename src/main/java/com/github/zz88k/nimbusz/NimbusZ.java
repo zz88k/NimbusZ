@@ -3,7 +3,7 @@ package com.github.zz88k.nimbusz;
 import com.github.zz88k.nimbusz.block.NimbusZBlockRegistry;
 import com.github.zz88k.nimbusz.item.NimbusZItemGroupRegistry;
 import com.github.zz88k.nimbusz.item.NimbusZItemRegistry;
-import com.github.zz88k.nimbusz.world.gen.NimbusZWorldGeneration;
+import com.github.zz88k.nimbusz.world.gen.NimbusZWorldGenerator;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -23,7 +23,7 @@ public class NimbusZ implements ModInitializer
 		NimbusZBlockRegistry.registerNimbusZBlocks();
 		NimbusZItemGroupRegistry.registerNimbusZItemGroups();
 
-		NimbusZWorldGeneration.generateNimbusZWorld();
+		NimbusZWorldGenerator.generateNimbusZWorld();
 
 		StrippableBlockRegistry.register(NimbusZBlockRegistry.FIR_LOG, NimbusZBlockRegistry.STRIPPED_FIR_LOG);
 		StrippableBlockRegistry.register(NimbusZBlockRegistry.FIR_WOOD, NimbusZBlockRegistry.STRIPPED_FIR_WOOD);

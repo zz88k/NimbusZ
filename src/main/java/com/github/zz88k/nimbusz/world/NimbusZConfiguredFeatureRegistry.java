@@ -2,18 +2,15 @@ package com.github.zz88k.nimbusz.world;
 
 import com.github.zz88k.nimbusz.NimbusZ;
 import com.github.zz88k.nimbusz.block.NimbusZBlockRegistry;
+import com.github.zz88k.nimbusz.world.gen.FoliagePlacer.FirFoliagePlacer;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
@@ -25,16 +22,15 @@ public class NimbusZConfiguredFeatureRegistry
     {
         register(context, FIR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                         BlockStateProvider.of(NimbusZBlockRegistry.FIR_LOG),
-                        new StraightTrunkPlacer(5, 6, 3),
+                        new StraightTrunkPlacer(10, 1, 2),
 
                         BlockStateProvider.of(NimbusZBlockRegistry.FIR_LEAVES),
-                        new BlobFoliagePlacer(
-                                ConstantIntProvider.create(4), // radius
-                                ConstantIntProvider.create(1), // offset
-                                8 // trunkHeight
+                        new FirFoliagePlacer(
+                                UniformIntProvider.create(2, 2),
+                                UniformIntProvider.create(2, 3),
+                                UniformIntProvider.create(3, 12)
                         ),
-
-                        new TwoLayersFeatureSize(1, 0, 2)
+                        new TwoLayersFeatureSize(1, 0, 1)
                 ).dirtProvider(BlockStateProvider.of(Blocks.DIRT)).build()
         );
     }
@@ -44,9 +40,8 @@ public class NimbusZConfiguredFeatureRegistry
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(NimbusZ.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
-                                                                                   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration)
-    {
+    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context, RegistryKey<ConfiguredFeature<?, ?>> key, F feature,
+                                                                                          FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }
