@@ -1,3 +1,7 @@
-// 1.21.1	2025-06-09T01:22:00.3796751	NimbusZ/
-473a794ba53ca0c26d92e1fb73897f81466ed9a2 data\nimbusz\worldgen\placed_feature\fir_placed.json
-37c528f6c1f5de9b71d7256a7489a7cbed2ed261 data\nimbusz\worldgen\configured_feature\fir.json
+// 1.21.1	2025-06-09T15:35:02.3221157	NimbusZ/
+9e1255397eb8c85922073c8a3f8ab1c853441cb1 data\nimbusz\worldgen\configured_feature\trees_paozu_forest.json
+4df2465c408e5a5aabf1886ebed7dc11dd58d475 data\nimbusz\worldgen\placed_feature\trees_paozu_forest.json
+092418029330c0ecd76313b4341eacace335455e data\nimbusz\worldgen\placed_feature\trees_paozu_plains.json
+44e2012a137dd817f055058fbe37a0a66e4d1719 data\nimbusz\worldgen\placed_feature\fir.json
+eaa129f2c8451ce9402222801514be698b477174 data\nimbusz\worldgen\configured_feature\fir.json
+dace076f2323f483357b3765ae7c97ab36c5cf9a data\nimbusz\worldgen\configured_feature\trees_paozu_plains.json

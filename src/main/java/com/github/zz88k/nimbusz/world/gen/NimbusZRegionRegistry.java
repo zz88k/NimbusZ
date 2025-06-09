@@ -36,5 +36,18 @@ public class NimbusZRegionRegistry extends Region
                 ),
                 NimbusZBiomeRegistry.PAOZU_PLAINS
         ));
+
+        mapper.accept(Pair.of(
+                new MultiNoiseUtil.NoiseHypercube(
+                        ParameterUtils.Temperature.WARM.parameter(),
+                        ParameterUtils.Humidity.WET.parameter(),
+                        ParameterUtils.Continentalness.MID_INLAND.parameter(),
+                        ParameterUtils.Erosion.EROSION_1.parameter(),
+                        ParameterUtils.Depth.SURFACE.parameter(),
+                        ParameterUtils.Weirdness.MID_SLICE_NORMAL_DESCENDING.parameter(),
+                        0L
+                ),
+                NimbusZBiomeRegistry.PAOZU_FOREST
+        ));
     }
 }

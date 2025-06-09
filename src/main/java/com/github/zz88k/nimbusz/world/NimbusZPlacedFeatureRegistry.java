@@ -2,27 +2,50 @@ package com.github.zz88k.nimbusz.world;
 
 import com.github.zz88k.nimbusz.NimbusZ;
 import com.github.zz88k.nimbusz.block.NimbusZBlockRegistry;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
 public class NimbusZPlacedFeatureRegistry
 {
-    public static final RegistryKey<PlacedFeature> FIR_PLACED_KEY = registerKey("fir_placed");
+    public static final RegistryKey<PlacedFeature> FIR = registerKey("fir");
+    public static final RegistryKey<PlacedFeature> TREES_PAOZU_PLAINS = registerKey("trees_paozu_plains");
+    public static final RegistryKey<PlacedFeature> TREES_PAOZU_FOREST = registerKey("trees_paozu_forest");
 
     public static void bootstrap(Registerable<PlacedFeature> context)
     {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, FIR_PLACED_KEY, configuredFeatures.getOrThrow(NimbusZConfiguredFeatureRegistry.FIR_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(2,
-                        0.1f, 2), NimbusZBlockRegistry.FIR_SAPLING));
+       PlacementModifier placementModifier = SurfaceWaterDepthFilterPlacementModifier.of(0);
+
+        register(context, FIR, configuredFeatures.getOrThrow(NimbusZConfiguredFeatureRegistry.FIR),
+                PlacedFeatures.wouldSurvive(NimbusZBlockRegistry.FIR_SAPLING)
+        );
+        register(context, TREES_PAOZU_PLAINS, configuredFeatures.getOrThrow(NimbusZConfiguredFeatureRegistry.TREES_PAOZU_PLAINS),
+                PlacedFeatures.createCountExtraModifier(0, 0.05F, 1),
+                SquarePlacementModifier.of(),
+                placementModifier,
+                PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP,
+                BlockFilterPlacementModifier.of(BlockPredicate.wouldSurvive(NimbusZBlockRegistry.FIR_SAPLING.getDefaultState(), BlockPos.ORIGIN)),
+                BiomePlacementModifier.of()
+        );
+        register(context, TREES_PAOZU_FOREST, configuredFeatures.getOrThrow(NimbusZConfiguredFeatureRegistry.TREES_PAOZU_FOREST),
+                PlacedFeatures.createCountExtraModifier(10, 0.1F, 1),
+                SquarePlacementModifier.of(),
+                placementModifier,
+                PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP,
+                BlockFilterPlacementModifier.of(BlockPredicate.wouldSurvive(NimbusZBlockRegistry.FIR_SAPLING.getDefaultState(), BlockPos.ORIGIN)),
+                BiomePlacementModifier.of()
+        );
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name)

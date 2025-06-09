@@ -9,5 +9,5 @@ import java.util.Optional;
 public class NimbusZSaplingGenerator
 {
     public static final SaplingGenerator FIR = new SaplingGenerator(NimbusZ.MOD_ID + ":fir",
-            Optional.empty(), Optional.of(NimbusZConfiguredFeatureRegistry.FIR_KEY), Optional.empty());
+            Optional.empty(), Optional.of(NimbusZConfiguredFeatureRegistry.FIR), Optional.empty());
 }

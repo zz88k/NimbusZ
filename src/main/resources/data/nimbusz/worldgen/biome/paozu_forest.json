@@ -1,9 +1,9 @@
 {
-  "category": "plains",
+  "category": "forest",
   "precipitation": "rain",
   "has_precipitation": true,
-  "temperature": 0.8,
-  "downfall": 0.9,
+  "temperature": 0.7,
+  "downfall": 0.8,
   "effects": {
     "sky_color": 7389695,
     "fog_color": 13561087,
@@ -16,6 +16,12 @@
       "tick_delay": 6000,
       "offset": 2.0,
       "block_search_extent": 8
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.forest"
     }
   },
   "carvers": {
@@ -77,8 +83,8 @@
     ],
     [
       "minecraft:glow_lichen",
-      "nimbusz:trees_paozu_plains",
-      "minecraft:patch_grass_plain"
+      "nimbusz:trees_paozu_forest",
+      "minecraft:patch_grass_forest"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -106,10 +112,10 @@
         "weight": 8
       },
       {
-        "type": "minecraft:rabbit",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 4
+        "type": "minecraft:wolf",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 5
       }
     ],
     "ambient": [

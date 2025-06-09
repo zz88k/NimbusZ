@@ -23,7 +23,7 @@ public class NimbusZ implements ModInitializer
 		NimbusZBlockRegistry.registerNimbusZBlocks();
 		NimbusZItemGroupRegistry.registerNimbusZItemGroups();
 
-		NimbusZWorldGenerator.generateNimbusZWorld();
+		NimbusZWorldGenerator.FIR_FOLIAGE_PLACER_TYPE.toString();
 
 		StrippableBlockRegistry.register(NimbusZBlockRegistry.FIR_LOG, NimbusZBlockRegistry.STRIPPED_FIR_LOG);
 		StrippableBlockRegistry.register(NimbusZBlockRegistry.FIR_WOOD, NimbusZBlockRegistry.STRIPPED_FIR_WOOD);

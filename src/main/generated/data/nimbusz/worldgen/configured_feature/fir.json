@@ -9,7 +9,7 @@
       }
     },
     "foliage_placer": {
-      "type": "minecraft:nimbusz",
+      "type": "nimbusz:fir_foliage_placer",
       "offset": {
         "type": "minecraft:uniform",
         "max_inclusive": 3,

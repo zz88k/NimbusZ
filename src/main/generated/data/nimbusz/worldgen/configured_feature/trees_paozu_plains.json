@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "nimbusz:fir",
+    "features": [
+      {
+        "chance": 0.33333334,
+        "feature": "nimbusz:trees_paozu_plains"
+      }
+    ]
+  }
+}

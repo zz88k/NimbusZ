@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-09T01:22:00.378678	NimbusZ/Model Definitions
+// 1.21.1	2025-06-09T15:35:02.3211184	NimbusZ/Model Definitions
 f1bf4fa6c9497fd3af1b9a9a0e4805bc9c943544 assets\nimbusz\models\block\fir_sapling.json
 fc3779e08148d3caa4146e7b24f8bce3e4d40bcb assets\nimbusz\models\item\stripped_fir_log.json
 a6c48922e9bf39978701743ce0eeab195a1043db assets\nimbusz\models\block\fir_stairs_outer.json
@@ -9,8 +9,8 @@ f31d1a7526b5753f0e4849faf26297829362175c assets\nimbusz\models\block\stripped_fi
 a8c1b10884a8c4c251f1eccc5fd84a36c9ba18be assets\nimbusz\models\block\fir_slab.json
 e0134def96305838fac4e5da6f886d78cd881f2d assets\nimbusz\models\item\limestone.json
 29a78b2c5c44dd77c779a5728f8e5043e14e2d3a assets\nimbusz\models\block\fir_leaves.json
-af29d981a9ea063e4dacf668a0f3cab94b87b0bb assets\nimbusz\blockstates\fir_planks.json
 d494e66e557e9297f2d745768138643760765346 assets\nimbusz\blockstates\stripped_fir_wood.json
+af29d981a9ea063e4dacf668a0f3cab94b87b0bb assets\nimbusz\blockstates\fir_planks.json
 ff041d0ad4e01fd40b554e383d971877b3d345d7 assets\nimbusz\models\block\stripped_fir_log_horizontal.json
 7379ab2da42f74ce088999a64d208c74ae85f189 assets\nimbusz\blockstates\fir_log.json
 d90d3bffc2eef935ad66cad7cdedd9801ded7af7 assets\nimbusz\blockstates\fir_slab.json

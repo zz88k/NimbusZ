@@ -11,4 +11,7 @@ public class NimbusZBiomeRegistry
     public static final RegistryKey<Biome> PAOZU_PLAINS = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(NimbusZ.MOD_ID, "paozu_plains")
     );
+    public static final RegistryKey<Biome> PAOZU_FOREST = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(NimbusZ.MOD_ID, "paozu_forest")
+    );
 }
